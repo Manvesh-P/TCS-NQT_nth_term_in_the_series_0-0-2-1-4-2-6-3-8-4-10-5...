@@ -1,0 +1,27 @@
+# TCS-NQT find the nth term of the series 0,0,2,1,4,2,6,3,8,4,10,5,........
+
+list1 = []
+list2 = []
+
+n = int(input("Enter the term to be found:"))
+
+if n > 20000:
+    print("Please enter value lesser than 20000")
+else:
+    if n % 2 != 0:
+        for i in range(0, (n//2)+1):
+            list1.append(2*i)
+            if i < (n//2):
+                list1.append(i)
+                
+        #print(list1)
+        print(list1[n-1])
+        
+    else:
+        for i in range(0, (n//2)):
+            list2.append(2*i)
+            list2.append(i)
+        
+        #print(list2)
+        print(list2[n-1])
+        
